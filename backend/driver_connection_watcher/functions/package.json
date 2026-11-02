@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Taluxi drivers connection manager to deploy in google cloud functions",
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
+    "start": "node init && npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
